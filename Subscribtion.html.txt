@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Power of Money - Paper Trading Wallet</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Welcome to Power of Money</h1>
+    <h2>Your Wallet Balance: ₹<span id="wallet-balance">5000000</span></h2>
+    <button id="subscribe-btn">Subscribe for ₹100/month</button>
+    <p id="subscription-status">Subscription Status: Not Subscribed</p>
+  </div>
+
+  <script>
+    let walletBalance = 5000000;
+    let isSubscribed = false;
+
+    const walletBalanceEl = document.getElementById("wallet-balance");
+    const subscriptionStatusEl = document.getElementById("subscription-status");
+    const subscribeBtn = document.getElementById("subscribe-btn");
+
+    subscribeBtn.addEventListener("click", function () {
+      if (walletBalance >= 100) {
+        walletBalance -= 100;
+        walletBalanceEl.textContent = walletBalance;
+        isSubscribed = true;
+        subscriptionStatusEl.textContent = "Subscription Status: Active";
+        alert("Subscription Successful!");
+      } else {
+        alert("Insufficient balance. Please add funds.");
+      }
+    });
+  </script>
+
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f5f5;
+      text-align: center;
+      margin-top: 100px;
+    }
+    .container {
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      display: inline-block;
+    }
+    button {
+      background-color: #007bff;
+      color: white;
+      border: none;
+      padding: 15px 30px;
+      margin-top: 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+    }
+    button:hover {
+      background-color: #0056b3;
+    }
+    p {
+      margin-top: 20px;
+      color: #333;
+    }
+  </style>
+</body>
+</html>
