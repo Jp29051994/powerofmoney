@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Watchlist - Power of Money</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>My Watchlist</h1>
+    <button onclick="addStock()">Add Stock</button>
+  </header>
+  
+  <main>
+    <table>
+      <thead>
+        <tr>
+          <th>Stock Name</th>
+          <th>Symbol</th>
+          <th>Price</th>
+          <th>Change</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody id="watchlist">
+        <!-- Stocks will be dynamically added here -->
+      </tbody>
+    </table>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
+
+/* CSS: style.css */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #007bff;
+  color: white;
+  padding: 10px;
+}
+
+button {
+  background-color: #28a745;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #218838;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+table, th, td {
+  border: 1px solid #ccc;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+/* JavaScript: script.js */
+const watchlistData = [
+  { name: 'Reliance', symbol: 'RELIANCE', price: 2800, change: '+2.3%' },
+  { name:
