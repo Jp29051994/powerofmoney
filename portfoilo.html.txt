@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Trading Portfolio - Power of Money</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Power of Money - Trading Portfolio</h1>
+    <nav>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#stocks">Stocks</a>
+      <a href="#wallet">Wallet</a>
+    </nav>
+  </header>
+
+  <section id="portfolio">
+    <h2>Your Portfolio</h2>
+    <table>
+      <thead>
+        <tr>
+          <th>Stock Name</th>
+          <th>Quantity</th>
+          <th>Buy Price</th>
+          <th>Current Price</th>
+          <th>Profit/Loss</th>
+        </tr>
+      </thead>
+      <tbody id="portfolio-data">
+        <!-- Data will be inserted dynamically using JS -->
+      </tbody>
+    </table>
+  </section>
+
+  <section id="wallet">
+    <h2>Your Wallet</h2>
+    <p>Available Funds: ₹5,000,000</p>
+    <button>Subscribe for ₹100/month</button>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>
